@@ -8,7 +8,7 @@
     "start": "node index.js",
     "prisma:generate": "prisma generate",
     "db:push": "prisma db push",
-    "postinstall": "npm run prisma:generate && npm run build"
+    "postinstall": "npm run prisma:generate && npm run db:push && npm run build"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
