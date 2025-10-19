@@ -22,16 +22,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/cryptoflow" element={<Index />} />
-          <Route path="/cryptoflow/a-propos" element={<About />} />
-          <Route path="/cryptoflow/services" element={<Services />} />
-          <Route path="/cryptoflow/contact" element={<Contact />} />
-          <Route path="/cryptoflow/faq" element={<FaqPage />} />
-          <Route path="/cryptoflow/cas-cliniques" element={<CasCliniques />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FaqPage />} />
           <Route path="/cas-cliniques" element={<CasCliniques />} />
-          <Route path="/cryptoflow/rendez-vous" element={<RendezVous />} />
+          <Route path="rendez-vous" element={<RendezVous />} />
           {/* Admin portal: protected route at /cryptoflow/login */}
-          <Route path="/cryptoflow/login" element={<Admin />} />
+          <Route path="/login" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
