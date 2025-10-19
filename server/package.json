@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch index.js",
-    "start": "npm run start",
+    "start": "npm start",
     "build": "npm install",
     "postinstall": "npm run prisma:generate",
     "db:push": "prisma db:push",
