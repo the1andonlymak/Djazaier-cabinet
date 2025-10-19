@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Noir / Doré / Blanc */
+    --background: 210 30% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 28% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 28% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Doré comme couleur primaire */
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 210 20% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 18%;
+    --muted-foreground: 215 20% 72%;
+
+    --accent: 187 85% 45%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 199 89% 52%;
+
+    /* (Optionnel) Sidebar tokens */
+    --sidebar-background: 210 30% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 210 20% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 20% 22%;
+    --sidebar-ring: 199 89% 52%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; font-feature-settings: "rlig" 1, "calt" 1; }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#06B6D4] to-[#0EA5E9] bg-clip-text text-transparent;
+  }
+  .bg-gradient-hero {
+    @apply bg-gradient-to-br from-[#0B1A2A] via-[#0E2233] to-[#123041];
+  }
+  .hero-glow:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15), transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.animate-on-scroll.show { opacity: 1; transform: translateY(0); }
+
+/* Hide native date picker icon for the birthdate input */
+.no-date-icon::-webkit-calendar-picker-indicator { display: none; }
+.no-date-icon::-webkit-clear-button { display: none; }
+.no-date-icon::-webkit-inner-spin-button, .no-date-icon::-webkit-outer-spin-button { display: none; -webkit-appearance: none; }
+.no-date-icon { -moz-appearance: textfield; }
