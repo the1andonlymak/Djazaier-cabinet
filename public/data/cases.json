@@ -1,0 +1,17 @@
+{
+  "categories": ["Implants", "Blanchiment", "Facettes"],
+  "cases": [
+    {"id":"implants-01","title":"Implants complets","category":"Implants","before":"/cryptoflow/assets/cases/implants/implants-01-before.svg","after":"/cryptoflow/assets/cases/implants/implants-01-after.svg"},
+    {"id":"implants-02","title":"Bridge implanto-porté","category":"Implants","before":"/cryptoflow/assets/cases/implants/implants-02-before.svg","after":"/cryptoflow/assets/cases/implants/implants-02-after.svg"},
+    {"id":"implants-03","title":"Implant unitaire incisive","category":"Implants","before":"/cryptoflow/assets/cases/implants/implants-03-before.svg","after":"/cryptoflow/assets/cases/implants/implants-03-after.svg"},
+
+    {"id":"blanchiment-01","title":"Blanchiment au fauteuil","category":"Blanchiment","before":"/cryptoflow/assets/cases/blanchiment/blanchiment-01-before.svg","after":"/cryptoflow/assets/cases/blanchiment/blanchiment-01-after.svg"},
+    {"id":"blanchiment-02","title":"Blanchiment combiné","category":"Blanchiment","before":"/cryptoflow/assets/cases/blanchiment/blanchiment-02-before.svg","after":"/cryptoflow/assets/cases/blanchiment/blanchiment-02-after.svg"},
+    {"id":"blanchiment-03","title":"Éclaircissement progressif","category":"Blanchiment","before":"/cryptoflow/assets/cases/blanchiment/blanchiment-03-before.svg","after":"/cryptoflow/assets/cases/blanchiment/blanchiment-03-after.svg"},
+    {"id":"blanchiment-04","title":"Uniformisation de teinte","category":"Blanchiment","before":"/cryptoflow/assets/cases/blanchiment/blanchiment-04-before.svg","after":"/cryptoflow/assets/cases/blanchiment/blanchiment-04-after.svg"},
+
+    {"id":"facettes-01","title":"Facettes céramiques antérieures","category":"Facettes","before":"/cryptoflow/assets/cases/facettes/facettes-01-before.svg","after":"/cryptoflow/assets/cases/facettes/facettes-01-after.svg"},
+    {"id":"facettes-02","title":"Alignement et facettes","category":"Facettes","before":"/cryptoflow/assets/cases/facettes/facettes-02-before.svg","after":"/cryptoflow/assets/cases/facettes/facettes-02-after.svg"},
+    {"id":"facettes-03","title":"Fermeture des diastèmes","category":"Facettes","before":"/cryptoflow/assets/cases/facettes/facettes-03-before.svg","after":"/cryptoflow/assets/cases/facettes/facettes-03-after.svg"}
+  ]
+}

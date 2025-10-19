@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-label="Comparatif avant/après (illustration)">
+  <defs>
+    <linearGradient id="ga" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="#0b1220"/>
+  <g>
+    <rect x="40" y="40" width="1520" height="1120" rx="28" fill="#ffffff" opacity="0.05"/>
+    <clipPath id="r">
+      <rect x="80" y="80" width="1440" height="1040" rx="24"/>
+    </clipPath>
+    <g clip-path="url(#r)">
+      <rect x="80" y="80" width="720" height="1040" fill="url(#ga)"/>
+      <rect x="800" y="80" width="720" height="1040" fill="url(#gb)"/>
+    </g>
+  </g>
+  <rect x="80" y="80" width="1440" height="1040" rx="24" fill="none" stroke="#ffffff" opacity="0.2"/>
+  <text x="440" y="640" text-anchor="middle" font-family="Inter, Arial" font-size="96" fill="#e5e7eb">AVANT</text>
+  <text x="1160" y="640" text-anchor="middle" font-family="Inter, Arial" font-size="96" fill="#ecfdf5">APRÈS</text>
+  <text x="440" y="700" text-anchor="middle" font-family="Inter, Arial" font-size="28" fill="#9ca3af">Image d'illustration</text>
+  <text x="1160" y="700" text-anchor="middle" font-family="Inter, Arial" font-size="28" fill="#d1fae5">Image d'illustration</text>
+</svg>

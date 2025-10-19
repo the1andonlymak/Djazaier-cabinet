@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  passwordHash  String   @map("password_hash")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("admin_users")
+}
+
+model Image {
+  id         Int      @id @default(autoincrement())
+  mime       String
+  data       Bytes
+  titleFr    String?  @map("title_fr")
+  captionFr  String?  @map("caption_fr")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@map("images")
+}
+
+model Appointment {
+  id               Int                 @id @default(autoincrement())
+  firstName        String              @map("first_name")
+  lastName         String              @map("last_name")
+  birthDate        DateTime            @map("birth_date")
+  appointmentDate  DateTime            @map("appointment_date")
+  firstTime        Boolean             @map("first_time")
+  phone            String
+  status           AppointmentStatus   @default(PENDING)
+  createdAt        DateTime            @default(now()) @map("created_at")
+
+  @@map("appointments")
+}
+
+enum AppointmentStatus {
+  PENDING
+  DONE
+}

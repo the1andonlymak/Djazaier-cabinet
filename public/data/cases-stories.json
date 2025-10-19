@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "cas-01",
+      "title": "Exemple — Réhabilitation esthétique du sourire",
+      "patient": "Patient A (anonymisé)",
+      "story": "Amélioration de l’équilibre du sourire avec une prise en charge conservatrice. Texte d’exemple à remplacer par votre description clinique.",
+      "imageCombined": "/cryptoflow/assets/cases/combined/InShot_20230529_203102424-1.jpg"
+    },
+    {
+      "id": "cas-02",
+      "title": "Exemple — Blanchiment dentaire",
+      "patient": "Patient B (anonymisé)",
+      "story": "Éclaircissement contrôlé avec suivi personnalisé pour un rendu harmonieux. Texte d’exemple à remplacer.",
+      "imageCombined": "/cryptoflow/assets/cases/combined/InShot_20230801_153731499-1.jpg"
+    },
+    {
+      "id": "cas-03",
+      "title": "Exemple — Harmonisation antérieure",
+      "patient": "Patient C (anonymisé)",
+      "story": "Optimisation de la forme et de la teinte des dents antérieures. Texte d’exemple à remplacer.",
+      "imageCombined": "/cryptoflow/assets/cases/combined/InShot_20230801_154335429-1.jpg"
+    },
+    {
+      "id": "cas-04",
+      "title": "Exemple — Réhabilitation avec facettes Emax",
+      "patient": "Patient D (anonymisé)",
+      "story": "Restauration esthétique et fonctionnelle par facettes céramiques. Texte d’exemple à remplacer.",
+      "imageCombined": "/cryptoflow/assets/cases/combined/Avant-apres-rehabilitation-dentaire-esthetique-avec-facettes-dentaires-en-Emax-a-Alger-en-Algerie-Khelil-Dental-Center-clinique-dentaire-a-Alger-en-Algerie-Patient-12.jpg"
+    }
+  ]
+}
