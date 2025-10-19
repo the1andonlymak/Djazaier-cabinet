@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch index.js",
-    "start": "node index.js",
-    "build": "npm run build",
-    "prisma:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "postinstall": "npm run prisma:generate && npm run db:push && npm run build"
+    "start": "npm run start",
+    "build": "npm install",
+    "prisma:generate": "prisma:generate",
+    "db:push": "prisma db:push",
+    "postinstall": "npm run prisma:generate"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
