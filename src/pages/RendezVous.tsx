@@ -60,7 +60,12 @@ const RendezVous = () => {
         firstTime: values.firstTime,
         phone: values.phone,
       });
-    } catch {}
+    } catch {
+      toast({
+        title: 'Erreur',
+        description: 'Une erreur est survenue lors de l\'envoi de la demande. Veuillez réessayer.',
+      });
+    }
 
     const message = `Bonjour, je souhaite prendre rendez-vous.\n\nNom et prénom: ${values.lastName} ${values.firstName}\nDate de naissance: ${formatDate(values.birthDate)}\nPremière visite: ${values.firstTime}\nDate souhaitée: ${formatDate(values.appointmentDate)}\nTéléphone: ${values.phone}`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
