@@ -6,12 +6,12 @@ import { Menu, X } from 'lucide-react';
 import logo from '@/assets/logo2.png';
 
 const navItems = [
-  { label: 'Accueil', to: '/cryptoflow' },
-  { label: 'À propos', to: '/cryptoflow/a-propos' },
-  { label: 'Services', to: '/cryptoflow/services' },
-  { label: 'Cas cliniques', to: '/cryptoflow/cas-cliniques' },
-  { label: 'Contact', to: '/cryptoflow/contact' },
-  { label: 'FAQ', to: '/cryptoflow/faq' },
+  { label: 'Accueil', to: '/' },
+  { label: 'À propos', to: '/a-propos' },
+  { label: 'Services', to: '/services' },
+  { label: 'Cas cliniques', to: '/cas-cliniques' },
+  { label: 'Contact', to: '/contact' },
+  { label: 'FAQ', to: '/faq' },
 ];
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-black/5 backdrop-blur-lg ">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/cryptoflow" className="flex items-center p-2">
+        <Link to="/" className="flex items-center p-2">
           <img src={logo} alt="Djazair cabinet dentaire" className="h-11 lg:h-14 w-auto object-contain" />
         </Link>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
-          <Link to="/cryptoflow/rendez-vous" aria-label="Prendre rendez-vous en ligne">
+          <Link to="/rendez-vous" aria-label="Prendre rendez-vous en ligne">
             <Button size="sm" className="font-semibold">Prendre rendez-vous</Button>
           </Link>
           <button className="lg:hidden text-white p-2" aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'} onClick={() => setOpen((v) => !v)}>
@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="lg:hidden fixed inset-0 z-[60] bg-black/40 backdrop-blur-md">
           <div className="flex h-full flex-col">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-              <Link to="/cryptoflow" className="flex items-center p-2">
+              <Link to="/" className="flex items-center p-2">
                 <img src={logo} alt="Djazair cabinet dentaire" className="h-11 w-auto object-contain" />
               </Link>
               <button className="text-white p-2" aria-label="Fermer le menu" onClick={() => setOpen(false)}>
