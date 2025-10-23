@@ -10,7 +10,7 @@ export type GalleryItem = {
   created_at?: string;
 };
 
-const base = process.env.NEXT_PUBLIC_API_BASE || 'https://djazaier-cabinet.onrender.com/';
+const base = process.env.NEXT_PUBLIC_API_BASE || 'https://djazaier-cabinet.onrender.com';
 
 export async function login(email: string, password: string) {
   const res = await fetch(base + '/api/login', {
