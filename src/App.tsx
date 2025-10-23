@@ -12,7 +12,7 @@ import FaqPage from "./pages/FaqPage";
 import RendezVous from "./pages/RendezVous";
 import CasCliniques from "./pages/CasCliniques";
 import Admin from "./pages/Admin";
-
+import AdminLogin from "./pages/AdminLogin"
 const queryClient = new QueryClient();
 
 const App = () => (
