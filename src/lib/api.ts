@@ -10,7 +10,7 @@ export type GalleryItem = {
   created_at?: string;
 };
 
-const base = '';
+const base = process.env.NEXT_PUBLIC_API_BASE || '';
 
 export async function login(email: string, password: string) {
   const res = await fetch(base + '/api/login', {
