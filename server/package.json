@@ -9,8 +9,11 @@
   "build": "echo 'Nothing to build'",
   "postinstall": "npm run prisma:generate",
   "db:push": "prisma db:push",
-  "prisma:generate": "npx prisma generate",
+  "prisma:generate": "npx prisma generate && npx prisma db seed",
   "seed": "npx prisma db seed" 
+},
+  "prisma": {
+  "seed": "node prisma/seed.js"
 },
   "dependencies": {
     "@prisma/client": "^5.22.0",
