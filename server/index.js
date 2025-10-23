@@ -27,7 +27,7 @@ const {
   ADMIN_PASSWORD,
   ADMIN_EMAIL = 'admin@example.com',
   JWT_SECRET,
-  CORS_ORIGINS = 'https://djazaier-cabinet.vercel.app/',
+  CORS_ORIGINS = 'https://djazaier-cabinet.vercel.app',
   PORT = 3001,
   NODE_ENV,
   DATABASE_URL,
