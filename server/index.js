@@ -317,6 +317,6 @@ app.get('/api/appointments/export', requireAuth, async (req, res) => {
   }
 });
 
-app.listen(Number(PORT), () => {
-  console.log(`API server listening on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ API server listening on port ${PORT}`);
 });
