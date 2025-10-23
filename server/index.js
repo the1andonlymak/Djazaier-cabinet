@@ -61,7 +61,7 @@ await initDb();
 const app = express();
 
 // CORS with credentials. In production, set CORS_ORIGINS to a comma-separated list of allowed origins.
-const allowedOrigins = (CORS_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
+const allowedOrigins = ['https://djazaier-cabinet.vercel.app'];
 app.use(cors({
   origin: (origin, cb) => {
     if (!origin) return cb(null, true); // same-origin or curl
