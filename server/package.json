@@ -9,7 +9,7 @@
   "build": "echo 'Nothing to build'",
   "postinstall": "npm run prisma:generate",
   "db:push": "prisma db:push",
-  "prisma:generate": "npx prisma generate"
+  "prisma:generate": "npx prisma generate",
   "seed": "npx prisma db seed" 
 },
   "dependencies": {
