@@ -30,7 +30,8 @@ const App = () => (
           <Route path="/cas-cliniques" element={<CasCliniques />} />
           <Route path="rendez-vous" element={<RendezVous />} />
           {/* Admin portal: protected route at /cryptoflow/login */}
-          <Route path="/login" element={<Admin />} />
+          <Route path="/login" element={<AdminLogin />} />
+          <Route path="/Admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
