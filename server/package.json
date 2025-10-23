@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --watch index.js",
-    "start": "node index.js",
-    "build": "npm install",
-    "postinstall": "npm run prisma:generate",
-    "db:push": "prisma db:push",
-    "prisma:generate": "npx prisma generate"
-  },
+  "dev": "node --watch index.js",
+  "start": "node index.js",
+  "build": "echo 'Nothing to build'",
+  "postinstall": "npm run prisma:generate",
+  "db:push": "prisma db:push",
+  "prisma:generate": "npx prisma generate"
+},
   "dependencies": {
     "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.1",
