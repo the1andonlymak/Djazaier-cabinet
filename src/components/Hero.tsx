@@ -20,7 +20,7 @@ const Hero = () => {
               Cabinet à la pointe, accueil humain et résultats esthétiques naturels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/cryptoflow/rendez-vous" aria-label="Prendre rendez-vous en ligne">
+              <Link to="/rendez-vous" aria-label="Prendre rendez-vous en ligne">
                 <Button size="lg" className="px-8 py-6 font-semibold">
                   Prendre rendez-vous
                   <ArrowRight className="ml-2 h-5 w-5" />
