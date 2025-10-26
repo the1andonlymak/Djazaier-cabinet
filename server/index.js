@@ -63,12 +63,7 @@ const app = express();
 // CORS with credentials. In production, set CORS_ORIGINS to a comma-separated list of allowed origins.
 const allowedOrigins = ['https://djazaier-cabinet.vercel.app'];
 app.use(cors({
-  origin: (origin, cb) => {
-    if (!origin) return cb(null, true); // same-origin or curl
-    if (allowedOrigins.length === 0) return cb(null, true); // dev: allow all
-    if (allowedOrigins.includes(origin)) return cb(null, true);
-    return cb(new Error('Not allowed by CORS: ' + origin));
-  },
+  origin: 'https://djazaier-cabinet.vercel.app',
   credentials: true,
 }));
 console.log('[CORS] Allowed origins:', allowedOrigins);
