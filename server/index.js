@@ -25,7 +25,7 @@ import ExcelJS from 'exceljs';
 // Environment
 const {
   ADMIN_PASSWORD,
-  ADMIN_EMAIL = 'admin@example.com',
+  ADMIN_EMAIL ,
   JWT_SECRET,
   CORS_ORIGINS = 'https://djazaier-cabinet.vercel.app',
   PORT = 3001,
@@ -86,7 +86,7 @@ const oneDayMs = 24 * 60 * 60 * 1000;
 const cookieName = 'token';
 const cookieOptions = {
   httpOnly: true,
-  sameSite: 'lax',
+  sameSite: 'none',
   secure: NODE_ENV === 'production',
   maxAge: oneDayMs,
   path: '/',
