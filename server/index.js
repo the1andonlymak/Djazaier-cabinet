@@ -87,7 +87,7 @@ const cookieName = 'token';
 const cookieOptions = {
   httpOnly: true,
   sameSite: 'none',
-  secure: NODE_ENV === 'production',
+  secure: true,
   maxAge: oneDayMs,
   path: '/',
 };
