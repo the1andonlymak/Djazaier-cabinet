@@ -39,26 +39,48 @@ export default function CasCliniques() {
   }, []);
 
   useEffect(() => {
-    fetch('/api/gallery')
-      .then(r => r.json())
-      .then((json: { items: Array<{ public_id: string; secure_url: string; title_fr?: string; caption_fr: string; created_at?: string; }> }) => {
-        const cases: CaseStory[] = json.items.map((it) => ({
-          id: it.public_id,
-          title: it.title_fr || it.caption_fr || 'Cas clinique',
-          patient: '',
-          story: it.caption_fr || '',
-          imageCombined: it.secure_url,
-        }));
-        setData({ cases });
-      })
-      .catch(() => {
-        setData({
-          cases: [
-            { id: 'fallback-1', title: 'Exemple', patient: 'Patient anonyme', story: 'Description du traitement.', imageCombined: `${base}assets/cases/combined/case-01.svg` }
-          ]
-        });
+  const loadGallery = async () => {
+    try {
+      const res = await fetch('/api/gallery', { cache: 'no-store' }); // prevent 304
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      // Some 304 responses have no body → handle safely
+      const text = await res.text();
+      if (!text) throw new Error('Empty body');
+
+      const json = JSON.parse(text);
+      console.log('📸 /api/gallery response:', json);
+
+      if (!json?.items?.length) throw new Error('No items found');
+
+      const cases: CaseStory[] = json.items.map((it: any) => ({
+        id: it.public_id,
+        title: it.title_fr || it.caption_fr || 'Cas clinique',
+        patient: '',
+        story: it.caption_fr || '',
+        imageCombined: it.secure_url || it.url || it.path || '',
+      }));
+
+      setData({ cases });
+    } catch (err) {
+      console.error('❌ Gallery fetch failed:', err);
+      setData({
+        cases: [
+          {
+            id: 'fallback-1',
+            title: 'Exemple',
+            patient: 'Patient anonyme',
+            story: 'Description du traitement.',
+            imageCombined: `${base}assets/cases/combined/case-01.svg`,
+          },
+        ],
       });
-  }, []);
+    }
+  };
+
+  loadGallery();
+}, []);
+
 
   const cases = (data?.cases || []).slice(0, 5);
 
