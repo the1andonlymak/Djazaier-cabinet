@@ -105,6 +105,8 @@ export default function CasCliniques() {
                 <p className="text-sm text-gray-400 mt-1">{item.patient}</p>
                 <p className="text-gray-200 mt-3 leading-relaxed">{item.story}</p>
               </div>
+              <pre className="text-xs text-gray-500 p-2">{JSON.stringify(item, null, 2)}</pre>
+
             </article>
           ))}
         </div>
