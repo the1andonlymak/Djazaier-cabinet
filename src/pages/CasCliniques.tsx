@@ -77,21 +77,26 @@ export default function CasCliniques() {
           {cases.map((item) => (
             <article key={item.id} className="bg-white/5 border border-white/10 rounded-xl overflow-hidden w-full max-w-[640px] mx-auto">
               <figure>
-                <AspectRatio ratio={16/9}>
-                  {item.imageCombined ? (
-                    <img
-                      src={item.imageCombined}
-                      alt={`${item.title} (image d’illustration) – avant à gauche, après à droite`}
-                      loading="lazy"
-                      decoding="async"
-                      width={1280}
-                      height={720}
-                      className="absolute inset-0 w-full h-full object-fill"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 grid place-items-center text-gray-400 text-sm">Image manquante</div>
-                  )}
-                </AspectRatio>
+<AspectRatio ratio={16 / 9}>
+  <div className="relative w-full h-full">
+    {item.imageCombined ? (
+      <img
+        src={item.imageCombined}
+        alt={`${item.title} (image d’illustration) – avant à gauche, après à droite`}
+        loading="lazy"
+        decoding="async"
+        width={1280}
+        height={720}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    ) : (
+      <div className="absolute inset-0 grid place-items-center text-gray-400 text-sm">
+        Image manquante
+      </div>
+    )}
+  </div>
+</AspectRatio>
+
                 <figcaption className="sr-only">{item.title}</figcaption>
               </figure>
 
